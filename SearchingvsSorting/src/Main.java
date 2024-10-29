@@ -5,20 +5,20 @@ public class Main {
         Scanner scanner = new Scanner(System.in);  
         
         // Nhập số lượng phần tử của mảng  
-        System.out.print("Nhập số lượng phần tử của mảng: ");  
+        System.out.print("Nhap so luong phan tu cua mang: ");  
         int arrayLength = scanner.nextInt();  
         
         // Khởi tạo mảng  
         int[] arrayInput = new int[arrayLength];  
         
         // Nhập các phần tử của mảng từ bàn phím  
-        System.out.println("Nhập các phần tử của mảng: ");  
+        System.out.println("Nhap cac phan tu cua mang: ");  
         for (int i = 0; i < arrayLength; i++) {  
             System.out.print("Phần tử thứ " + (i + 1) + ": "); // Thay đổi chỉ số cho dễ đọc  
             arrayInput[i] = scanner.nextInt();  
         }  
 
-        System.out.print("Nhập giá trị cần tìm: ");  
+        System.out.print("Nhap gia tri can tim: ");  
         int key = scanner.nextInt();  
         callMeForLinearSearch(arrayInput, key);  // Gọi phương thức tìm kiếm  
         scanner.close();  
@@ -29,13 +29,13 @@ public class Main {
         boolean found = false;  
         for (int i = 0; i < array.length; i++) {  
             if (array[i] == key) {  
-                System.out.println("Giá trị " + key + " được tìm thấy ở vị trí: " + i);  
+                System.out.println("Gia tri " + key + " duoc tim thay ơ vi tri " + i);  
                 found = true;  
                 break;  
             }  
         }  
         if (!found) {  
-            System.out.println("Giá trị " + key + " không được tìm thấy trong mảng.");  
+            System.out.println("Gia tri " + key + " khong duoc tim thay trong mang.");  
         }  
     }  
 }
